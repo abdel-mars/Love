@@ -1,44 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>This one is for my Ruby</title>
 
-<!doctype html>
-<html>
-	<head>
-		<meta charet="utf-8">
-		<title></title>
-		<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/github-styles.css">
-		<link href='https://fonts.googleapis.com/css?family=Amatic+SC|Cedarville+Cursive' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<!--START OF CONTAINER DIV-->
-	<div class="container">
-		<header>
-			<h1>GitHub Love Letter</h1>
-		</header>
-		<a href="index.html"><p class="center">Back to portal</p></a>
-		<br>
-		<p>Oh Branches,</p>
-		<p>I can always use <b>git branch</b> to know which one I'm in.</p>
-		<p>Or, to start anew, <b>git branch -b [new name]</b> while create a new branch,</p>
-		<p>Perhaps one to attach my tree swing to.</p>
-		<br>
-		<p>To merge two branches into one, it's as simple as running through a field of flowers,</p>
-		<p>just by typing <b>git merge [branch name]</b>.</p>
-		<p>And lest I forget,</p>
-		<p>the power of <b>git remote</b>.</p>
-		<br>
-		<p>Because <b>git remote -v </b> will let me see my options,</p>
-		<p>and <b>fetch</b> will take from the server to merge.</p>
-		<p>Even though your love <b>push</b>es and <b>pull</b>s me around,</p>
-		<p>the only place I want to <b>checkout</b> is with you.</p>
-		<br>
-		<p>Tyler :)</p>
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/jquery-2.2.0.min.js"><\/script>');</script>
-		<script src="js/main.js"></script>
-		<footer>
-		</footer>
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*THE CODE OF LOVE</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Hey my Girl!, Ruby!<br />
+			Do you remember the day we first met?<br />
+			<span class="comments">// The FMS building. </span><br />
+			Since that day a spark begun;<br />
+			<span class="comments">// Your face Your Voice Your Words Your laugh...</span><br />
+			Your everything got imprinted in my heart;<br />
+			As the time went on;<br />
+			The Bond grew stronger and stronger;<br />
+			Journey from Infatuation to Love;<br />
+			We have traveled a long way together;<br />
+			There have been fights ;<br />
+			<span class="comments">// And I'm sure there will be more.</span><br />
+			But our Bond will always grow back Stronger;<br />
+			<br>
+			<br>
+			All I want to say is:<br />
+			Baby, I will love you forever;<br />
+			<br>
+			<br>
+			Now If you want to hug me you can touch the heart below<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU...<br/>
+					<div class="signature">- Mars</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	</body>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2024, 1, 16);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
 </html>
