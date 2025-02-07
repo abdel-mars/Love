@@ -1,0 +1,65 @@
+/* global styles */
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+.hide {
+	display: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.container{
+	max-width:960px;
+	margin:0 auto;
+	background:rgba(233,234,143,0.65);
+	padding:15px;
+}
+
+.center{
+	text-align:center;
+}
+
+body{
+	background-image: url(../img/github-bg.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	font-size:40px;
+	font-family: 'Amatic SC', cursive;
+}
+
+a:link,
+a:visited,
+a:active {
+	color:rgba(115,63,75,1);
+}
+
+a:hover{
+	color:rgba(72,64,59,1);
+}
+
+h1{
+	font-family: 'Cedarville Cursive', cursive;
+	text-align:center;
+	font-size:70px;
+}
